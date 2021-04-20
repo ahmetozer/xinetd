@@ -13,4 +13,5 @@ COPY --from=0 /usr/local/sbin/itox /usr/local/sbin/
 COPY --from=0 /usr/local/sbin/xconv.pl /usr/local/sbin/
 COPY --from=0 /tmp/xinetd/contrib/xinetd.conf /etc/xinetd.conf
 COPY --from=0 /tmp/xinetd/contrib/xinetd.conf /etc/xinetd.d/example.conf
+LABEL org.opencontainers.image.source="https://github.com/ahmetozer/xinetd"
 ENTRYPOINT [ "/usr/local/sbin/xinetd", "-d" ]
